@@ -1,0 +1,43 @@
+
+input InputReview {   #input by user ADD
+    id:String!
+    restaurantName:String!
+    rateOverall:Int!
+    text:String
+}
+
+
+type LocalReview {  #is one of localreviews from input by user (distinguished from data from gmap api)
+    id:String
+    restaurantName:String
+    rateOverall:Int
+    text:String
+}
+
+
+#type commonTag{
+#}
+
+
+type Query{
+    #use in backend,to be combined with gmap data
+    fetchLocalReviews(id:String!): [LocalReview] #maybe null?, (or other return value when there is no localreview for this restaurant)
+   
+}
+
+
+type Mutation{
+    putUserReview(input: InputReview!) : LocalReview!
+    sendPlaceID(placeID: String!): Response!
+}
+
+type Response {
+  success: Boolean!
+  message: String!
+}
+
+
+
+
+
+

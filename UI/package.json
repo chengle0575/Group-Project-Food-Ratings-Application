@@ -1,0 +1,45 @@
+{
+  "name": "it5007-lecture5",
+  "version": "1.0.0",
+  "description": "NUS IT5007",
+  "main": "index.js",
+  "dependencies": {
+    "@react-google-maps/api": "2.19.3",
+    "apollo-server-express": "^2.3.1",
+    "express": "^4.18.2",
+    "graphql": "^0.13.2",
+    "mongodb": "^3.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-modules-commonjs": "7.24.1",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "nodemon": "^2.0.20",
+    "webpack-dev-server": "^3.11.0",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.2",
+    "file-loader": "^6.2.0"
+  },
+  "scripts": {
+    "start": "npm install && npx webpack && webpack-dev-server --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkarthik88/IT5007-Lecture5.git"
+  },
+  "author": "Prasanna Karthik Vairam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkarthik88/IT5007-Lecture5/issues"
+  },
+  "homepage": "https://github.com/pkarthik88/IT5007-Lecture5#readme"
+}
