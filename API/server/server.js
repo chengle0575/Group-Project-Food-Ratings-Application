@@ -9,14 +9,15 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // This middleware is required to parse JSON bodies
 //graphql middleware
+//*** can consider wrapped in app.post('review/restaurantID') using express route and restapi
 graphqlServer.applyMiddleware({app,path:'/reviews'});
 
 app.get('/', (req, res) => {
 	res.send('Server is running');
   });
 
-
-app.post('/summary', async (req,res)=>{ //handle client request
+//*** change to app.get('review/restaurantID') using express route and rest api
+app.get('/summary', async (req,res)=>{ //handle client request
 	//using in development
 	//let PLACE_ID="ChIJsfvX3fUa2jERoMQytgleoOA";
     //let tags=["cleanness","fast","environment"] //need to get from front-end
