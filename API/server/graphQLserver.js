@@ -63,7 +63,7 @@ async function fetchLocalReviews(_,args){
 
 async function putUserReview(_,args){
     try{
-        await db.collection('localreview').insertOne({id:args.input.id, restaurantName:args.input.restaurantName, rateOverall:args.input.rateOverall,tex:args.input.text});
+        await db.collection('localreview').insertOne({id:args.input.id, restaurantName:args.input.restaurantName, rateOverall:args.input.rateOverall,text:args.input.text});
        
         return args.input;
     }
