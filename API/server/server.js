@@ -48,13 +48,12 @@ app.listen(8000, function () {
 function handleGmapData(placeDetail){
 
 	let reviewTexts=``; //save all review text to pass to openai
-    for(i=0;i<4.;i++){ //each time only fetch 5 logs from googlemap
+    for(let i=0;i<4;i++){ //each time only fetch 5 logs from googlemap
 		reviewTexts=`${reviewTexts}${placeDetail.reviews[i].text.text}`;
 	}
 
 	console.log(reviewTexts);
 	return reviewTexts;
 }
-
 
 
